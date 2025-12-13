@@ -171,12 +171,12 @@ make && sudo make install
 popd
 
 # 添加主题
-# git_clone https://github.com/sirpdboy/luci-theme-kucat
-# git_clone https://github.com/sirpdboy/luci-app-kucat-config
+git_clone https://github.com/sirpdboy/luci-theme-kucat
+git_clone https://github.com/sirpdboy/luci-app-kucat-config
 # git_clone https://github.com/kiddin9/luci-theme-edge
-git_clone https://github.com/jerrykuku/luci-theme-argon
-git_clone https://github.com/jerrykuku/luci-app-argon-config
-# clone_all https://github.com/sbwml/luci-theme-argon
+# git_clone https://github.com/jerrykuku/luci-theme-argon
+# git_clone https://github.com/jerrykuku/luci-app-argon-config
+clone_all https://github.com/sbwml/luci-theme-argon
 
 # 更改argon主题背景
 # cp -f $GITHUB_WORKSPACE/personal/bg1.jpg feeds/luci/themes/luci-theme-argon/htdocs/luci-static/argon/img/bg1.jpg
@@ -303,6 +303,7 @@ sed -i 's,frp 服务器,Frp 服务器,g' feeds/luci/applications/luci-app-frps/p
 sed -i 's,frp 客户端,Frp 客户端,g' feeds/luci/applications/luci-app-frpc/po/zh_Hans/frpc.po
 sed -i 's,UPnP IGD 和 PCP,UPnP,g' feeds/luci/applications/luci-app-upnp/po/zh_Hans/upnp.po
 sed -i 's/msgstr "主题设置"/msgstr "Argon 设置"/g' $(grep 'msgstr "主题设置"' -rl ./)
+sed -i '/^msgstr "/s/KuCat\([一-龥]\)/KuCat \1/g' $(grep 'msgstr "KuCat' -rl ./)
 
 # 转换插件语言翻译
 for e in $(ls -d $destination_dir/luci-*/po feeds/luci/applications/luci-*/po); do
