@@ -92,6 +92,12 @@ for f in $(grep -rl 'luci-app-attendedsysupgrade' package feeds | grep 'Makefile
     echo "✅"
 done
 
+# 加入autocore
+mkdir -p package/emortal && \
+git clone --depth=1 --branch $REPO_BRANCH https://github.com/immortalwrt/immortalwrt.git /tmp/immortalwrt && \
+mv /tmp/immortalwrt/package/emortal/autocore package/emortal/ && \
+rm -rf /tmp/immortalwrt
+
 # 报错修复
 # rm -rf feeds/packages/utils/v2dat
 
