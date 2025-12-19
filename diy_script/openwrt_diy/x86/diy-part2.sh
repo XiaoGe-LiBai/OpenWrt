@@ -135,6 +135,9 @@ git_clone 22.03 https://github.com/sbwml/feeds_packages_net_aria2 aria2
 # 同时兼容firewall3/4 的luci-app-socat
 clone_dir main https://github.com/chenmozhijin/luci-app-socat luci-app-socat
 
+# 看门狗
+clone_dir main https://github.com/sirpdboy/luci-app-watchdog.git luci-app-watchdog watchdog
+
 # ddns-go 动态域名
 # clone_all https://github.com/sirpdboy/luci-app-ddns-go
 
