@@ -208,9 +208,9 @@ jobs:
 
         #sed -i 's/KERNEL_TESTING_PATCHVER:=*.*/KERNEL_TESTING_PATCHVER:=5.15/g' target/linux/x86/Makefile
 
-        sed -i 's/192.168.8.3/192.168.8.5/g' package/base-files/files/bin/config_generate
+        sed -i 's/192.168.2.240/192.168.2.241/g' package/base-files/files/bin/config_generate
 
-        sed -i 's/192.168.8.3/192.168.8.5/g' package/base-files/luci2/bin/config_generate
+        sed -i 's/192.168.2.240/192.168.2.241/g' package/base-files/luci2/bin/config_generate
 
     - name: SSH connection to Actions
       uses: P3TERX/ssh2actions@v1.0.0
@@ -348,7 +348,7 @@ jobs:
           - ⚽ 固件源码: ${{ env.REPO_URL }}
           - 💝 源码分支: ${{ env.REPO_BRANCH }}
           - 🚀 内核版本: ${{ env.KERNEL }}
-          - 🌐 默认地址：192.168.8.5
+          - 🌐 默认地址：192.168.2.241
           - 🔑 默认密码：无密码
           ### 🧊 固件版本
           - 当前使用版本:【编译前的最后一次[➦主源码](https://github.com/coolsnowwolf/lede)更新记录】
@@ -526,9 +526,9 @@ jobs:
         
         #sed -i 's/KERNEL_TESTING_PATCHVER:=*.*/KERNEL_TESTING_PATCHVER:=5.15/g' target/linux/x86/Makefile
 
-        sed -i 's/192.168.8.3/192.168.8.5/g' package/base-files/files/bin/config_generate
+        sed -i 's/192.168.2.240/192.168.2.241/g' package/base-files/files/bin/config_generate
 
-        sed -i 's/192.168.8.3/192.168.8.5/g' package/base-files/luci2/bin/config_generate
+        sed -i 's/192.168.2.240/192.168.2.241/g' package/base-files/luci2/bin/config_generate
 
     - name: SSH connection to Actions
       uses: P3TERX/ssh2actions@v1.0.0
@@ -666,7 +666,7 @@ jobs:
           - ⚽ 固件源码: ${{ env.REPO_URL }}
           - 💝 源码分支: ${{ env.REPO_BRANCH }}
           - 🚀 内核版本: ${{ env.KERNEL }}
-          - 🌐 默认地址：192.168.8.5
+          - 🌐 默认地址：192.168.2.241
           - 🔑 默认密码：无密码
           ### 🧊 固件版本
           - 当前使用版本:【编译前的最后一次[➦主源码](https://github.com/coolsnowwolf/lede)更新记录】

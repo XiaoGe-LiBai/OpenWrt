@@ -14,7 +14,7 @@ chmod +x $GITHUB_WORKSPACE/diy_script/function.sh
 source $GITHUB_WORKSPACE/diy_script/function.sh
 
 # 修改默认IP
-sed -i 's/192.168.1.1/192.168.8.3/g' package/base-files/files/bin/config_generate
+sed -i 's/192.168.1.1/192.168.2.240/g' package/base-files/files/bin/config_generate
 
 # 设置ttyd免帐号登录
 sed -i 's/\/bin\/login/\/bin\/login -f root/' feeds/packages/utils/ttyd/files/ttyd.config

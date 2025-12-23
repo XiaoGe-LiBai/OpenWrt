@@ -16,9 +16,9 @@
 - 项目使用 Github Actions 拉取 [Lean](https://github.com/coolsnowwolf/lede) [immortalwrt](https://github.com/immortalwrt/immortalwrt) [openwrt](https://github.com/openwrt/openwrt) 的 `Openwrt` 源码仓库进行云编译
 - ♨️【x86】Docker版（Kernel=32M，rootfs=5120M）和 无Docker版（Kernel=32M，rootfs=1668M）不通刷
 - 🔴arm 固件默认 IP 地址：`192.168.8.8` 默认密码：`password`
-- 🔴x86 固件默认 IP 地址：`192.168.8.3` 默认密码：`无密码`
-- 🔴x86[Docker] 固件默认 IP 地址：`192.168.8.3` 默认密码：`无密码`
-- 🔴x86[个人版] 固件默认 IP 地址：`192.168.8.5` 默认密码：`无密码`
+- 🔴x86 固件默认 IP 地址：`192.168.2.240` 默认密码：`无密码`
+- 🔴x86[Docker] 固件默认 IP 地址：`192.168.2.240` 默认密码：`无密码`
+- 🔴x86[个人版] 固件默认 IP 地址：`192.168.2.241` 默认密码：`无密码`
 - 仓库编译的固件插件均为最新版本，最新版意味着可能有 BUG，如果之前使用稳定，则无需追新
 
 ## 插件预览 [![](https://img.shields.io/badge/-固件插件及功能预览-FFFFFF.svg)](#插件预览-)

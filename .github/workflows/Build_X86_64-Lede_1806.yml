@@ -430,7 +430,7 @@ jobs:
           - ⚽ 固件源码: ${{ env.REPO_URL }}
           - 💝 源码分支: ${{ env.REPO_BRANCH }}
           - 🚀 内核版本: ${{ env.KERNEL }}
-          - 🌐 默认地址：192.168.8.3
+          - 🌐 默认地址：192.168.2.240
           - 🔑 默认密码：无密码
           ### 🧊 固件版本
           - 当前使用版本:【编译前的最后一次[➦主源码](https://github.com/coolsnowwolf/lede)更新记录】
@@ -742,7 +742,7 @@ jobs:
           - ⚽ 固件源码: ${{ env.REPO_URL }}
           - 💝 源码分支: ${{ env.REPO_BRANCH }}
           - 🚀 内核版本: ${{ env.KERNEL }}
-          - 🌐 默认地址：192.168.8.3
+          - 🌐 默认地址：192.168.2.240
           - 🔑 默认密码：无密码
           ### 🧊 固件版本
           - 当前使用版本:【编译前的最后一次[➦主源码](https://github.com/coolsnowwolf/lede)更新记录】
@@ -1057,7 +1057,7 @@ jobs:
           - ⚽ 固件源码: ${{ env.REPO_URL }}
           - 💝 源码分支: ${{ env.REPO_BRANCH }}
           - 🚀 内核版本: ${{ env.KERNEL }}
-          - 🌐 默认地址：192.168.8.3
+          - 🌐 默认地址：192.168.2.240
           - 🔑 默认密码：无密码
           ### 🧊 固件版本
           - 当前使用版本:【编译前的最后一次[➦主源码](https://github.com/coolsnowwolf/lede)更新记录】
@@ -1370,7 +1370,7 @@ jobs:
           - ⚽ 固件源码: ${{ env.REPO_URL }}
           - 💝 源码分支: ${{ env.REPO_BRANCH }}
           - 🚀 内核版本: ${{ env.KERNEL }}
-          - 🌐 默认地址：192.168.8.3
+          - 🌐 默认地址：192.168.2.240
           - 🔑 默认密码：无密码
           ### 🧊 固件版本
           - 当前使用版本:【编译前的最后一次[➦主源码](https://github.com/coolsnowwolf/lede)更新记录】
@@ -1687,7 +1687,7 @@ jobs:
           - ⚽ 固件源码: ${{ env.REPO_URL }}
           - 💝 源码分支: ${{ env.REPO_BRANCH }}
           - 🚀 内核版本: ${{ env.KERNEL }}
-          - 🌐 默认地址：192.168.8.3
+          - 🌐 默认地址：192.168.2.240
           - 🔑 默认密码：无密码
           ### 🧊 固件版本
           - 当前使用版本:【编译前的最后一次[➦主源码](https://github.com/coolsnowwolf/lede)更新记录】
