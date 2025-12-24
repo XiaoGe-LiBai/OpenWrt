@@ -23,6 +23,7 @@
 
 ## 插件预览 [![](https://img.shields.io/badge/-固件插件及功能预览-FFFFFF.svg)](#插件预览-)
 - ******标记arm的，只有arm有******
+> ⚠️ 基于合规及安全策略，IPSec/SoftEther/OpenVPN/N2N VPN、Tailscale、ShadowSocksR Plus+、动态 DNS 与 DDNSTO 等插件已默认屏蔽，如需启用请自行评估风险并手动调整配置。
 <details>
 <summary><b>&nbsp; 插件预览</b></summary>
 <br/>
@@ -66,15 +67,15 @@
 　├── iKoolProxy 滤广告<br/>
 　├── 广告屏蔽大师 Plus+<br/>
 　├── AdGuard Home<br/>
-　├── ShadowSocksR Plus+<br/>
-　├── DDNSTO 远程控制<br/>
+　├── ~~ShadowSocksR Plus+~~?????<br/>
+　├── ~~DDNSTO ????~~?????<br/>
 　├── 应用过滤<br/>
 　├── 全能推送<br/>
 　├── 上网时间控制<br/>
 　├── 解锁网易云灰色歌曲<br/>
 　├── OpenClash<br/>
 　├── Lucky<br/>
-　├── 动态 DNS<br/>
+　├── ~~?? DNS~~?????<br/>
 　├── MosDNS<br/>
 　├── 网络唤醒<br/>
 　├── Frps<br/>
@@ -108,10 +109,10 @@
 <details>
 <summary><b>├── VPN</b></summary>
 　├── V2ray 服务器<br/>
-　├── N2N VPN<br/>
-　├── SoftEther VPN 服务器<br/>
-　├── OpenVPN 服务器<br/>
-　├── IPSec VPN 服务器<br/>
+　├── ~~N2N VPN~~?????<br/>
+　├── ~~SoftEther VPN ???~~?????<br/>
+　├── ~~OpenVPN ???~~?????<br/>
+　├── ~~IPSec VPN ???~~?????<br/>
 　├── PPTP VPN 服务器<br/>
 　└── ZeroTier
 </details>

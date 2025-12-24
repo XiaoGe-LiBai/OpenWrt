@@ -22,122 +22,101 @@
 - 仓库编译的固件插件均为最新版本，最新版意味着可能有 BUG，如果之前使用稳定，则无需追新
 
 ## 插件预览 [![](https://img.shields.io/badge/-固件插件及功能预览-FFFFFF.svg)](#插件预览-)
-- ******标记arm的，只有arm有******
+- **标记为 (arm) 的菜单仅出现在 ARM 固件中**
+> ⚠️ 基于合规与安全考量，IPSec / SoftEther / OpenVPN / N2N VPN、Tailscale、ShadowSocksR Plus+、动态 DNS、DDNSTO 等插件默认由脚本屏蔽，如需启用请评估风险并手动调整配置。
 <details>
-<summary><b>&nbsp; 插件预览</b></summary>
-<br/>
-<details>
-<summary><b>├── 状态</b></summary>
-　├── 概况<br/>
-　├── 防火墙<br/>
-　├── 路由表<br/>
-　├── 系统日志<br/>
-　├── 内核日志<br/>
-　├── 系统进程<br/>
-　├── 实时信息<br/>
-　├── 实时监控<br/>
-　├── WireGuard状态<br/>
-　├── 负载均衡<br/>
-　└── 释放内存
-</details>
-<details>
-<summary><b>├── 系统</b></summary>
-　├── 系统<br/>
-　├── Web管理<br/>
-　├── 管理权<br/>
-　├── 软件包<br/>
-　├── TTYD 终端<br/>
-　├── 启动项<br/>
-　├── 计划任务<br/>
-　├── 挂载点<br/>
-　├── 磁盘管理<br/>
-　├── 备份/升级<br/>
-　├── 定时设置<br/>
-　├── 文件传输<br/>
-　├── Argon 主题设置<br/>
-　├── Design 主题设置<br/>
-　├── 重启<br/>
-　└── 关机
-</details>
-<details>
-<summary><b>├── 服务</b></summary>
-　├── PassWall<br/>
-　├── PassWall2  (arm)<br/>
-　├── Hello World<br/>
-　├── AdGuard Home<br/>
-　├── ShadowSocksR Plus+<br/>
-　├── DDNSTO 远程控制<br/>
-　├── 应用过滤<br/>
-　├── 网站域名黑白名单配置<br/>
-　├── 全能推送<br/>
-　├── 上网时间控制<br/>
-　├── OpenClash<br/>
-　├── Lucky<br/>
-　├── 动态 DNS<br/>
-　├── SmartDNS<br/>
-　├── MosDNS<br/>
-　├── 网络唤醒<br/>
-　├── Frps<br/>
-　├── UPnP<br/>
-　├── Frp 内网穿透<br/>
-　├── KMS 服务器<br/>
-　└── Nps 内网穿透
-</details>
-<details>
-<summary><b>├── Docker  (arm)</b></summary>
-　├── 概览<br/>
-　├── 容器<br/>
-　├── 镜像<br/>
-　├── 网络<br/>
-　├── 存储卷<br/>
-　├── 事件<br/>
-　└── 设置
-</details>
-<details>
-<summary><b>├── 网络存储</b></summary>
-　├── 文件浏览器<br/>
-　├── NFS 管理<br/>
-　├── Alist 文件列表<br/>
-　├── USB 打印服务器<br/>
-　├── 硬盘休眠<br/>
-　├── 打印服务器<br/>
-　├── 网络共享<br/>
-　├── Aria2 配置<br/>
-　└── FTP 服务器
-</details>
-<details>
-<summary><b>├── VPN</b></summary>
-　├── V2ray 服务器<br/>
-　├── N2N VPN<br/>
-　├── SoftEther VPN 服务器<br/>
-　├── OpenVPN 服务器<br/>
-　├── IPSec VPN 服务器<br/>
-　├── PPTP VPN 服务器<br/>
-　└── ZeroTier
-</details>
-<details>
-<summary><b>├── 网络</b></summary>
-　├── 接口<br/>
-　├── DHCP/DNS<br/>
-　├── 主机名<br/>
-　├── IP/MAC 绑定<br/>
-　├── 静态路由<br/>
-　├── 防火墙<br/>
-　├── 诊断<br/>
-　├── IP限速<br/>
-　├── Socat<br/>
-　├── Turbo ACC 网络加速<br/>
-　├── 多线多拨<br/>
-　└── 负载均衡
-</details>
-<details>
-<summary><b>├── 带宽监控</b></summary>
-　├── 显示<br/>
-　├── 配置<br/>
-　├── 备份<br/>
-　└── 实时流量监测
-</details>
-　└── <b>退出</b>
+<summary><b>菜单结构（与 disable_plugins.py 保持一致）</b></summary>
+
+```text
+实际顺序
+├── 状态
+│   ├── 概况（overview）
+│   ├── 路由（routes）
+│   ├── 防火墙（nftables）
+│   ├── 系统日志（logs）
+│   ├── 系统进程（processes）
+│   ├── 实时信息（realtime）
+│   ├── WireGuard状态（wireguard-status）
+│   ├── WireGuard配置（wireguard-config）
+│   └── 释放内存（ramfree）
+├── 系统
+│   ├── 系统（system）
+│   ├── 管理权（admin）
+│   ├── TTYD 终端（ttyd）
+│   ├── 软件包（package-manager）
+│   ├── 启动项（startup）
+│   ├── 计划任务（crontab）
+│   ├── 挂载点（mounts）
+│   ├── 备份与更新（flash）
+│   ├── 文件管理器（filemanager）
+│   ├── 定时重启（autoreboot）
+│   ├── Argon 设置（argon-config）
+│   ├── KuCat 设置（kucat-config）
+│   ├── 重启（reboot）
+│   └── 关机（poweroff）
+├── 服务
+│   ├── PassWall（passwall）
+│   ├── PassWall2 (arm)（passwall2-arm）
+│   ├── HomeProxy（homeproxy）
+│   ├── ShadowSocksR Plus+（shadowsocksr）
+│   ├── 看门狗（watchdog）
+│   ├── AdGuard Home（adguardhome）
+│   ├── MosDNS（mosdns）
+│   ├── 全能推送（pushbot）
+│   ├── OpenClash（openclash）
+│   ├── Lucky（lucky）
+│   ├── 动态 DNS（ddns）
+│   ├── DDNSTO 远程控制（ddnsto）
+│   ├── SmartDNS（smartdns）
+│   ├── 网络唤醒（wol）
+│   ├── Nps 内网穿透（nps）
+│   ├── 应用过滤（appfilter）
+│   ├── Aria2（aria2）
+│   ├── Frp 客户端（frpc）
+│   ├── Frp 服务端（frps）
+│   ├── Momo（momo）
+│   ├── Nikki（nikki）
+│   ├── OpenList（openlist2）
+│   ├── uHTTPd（uhttpd）
+│   ├── UPnP（upnp）
+│   └── Vlmcsd KMS 服务器（vlmcsd）
+├── Docker (arm)
+│   ├── 概览（dockerman-overview）
+│   ├── 容器（dockerman-containers）
+│   ├── 镜像（dockerman-images）
+│   ├── 网络（dockerman-network）
+│   ├── 存储卷（dockerman-volumes）
+│   ├── 事件（dockerman-events）
+│   └── 设置（dockerman-settings）
+├── 网络存储
+│   ├── USB 打印服务器（usb_printer）
+│   ├── 硬盘休眠（hd_idle）
+│   ├── p910nd-打印服务器（p910nd）
+│   ├── 网络共享（samba4）
+│   └── FTP 服务器（vsftpd）
+├── VPN
+│   ├── IPSec VPN 服务器（ipsec-vpnd）
+│   ├── SoftEther VPN 服务器（softethervpn）
+│   ├── OpenVPN 服务器（openvpn-server）
+│   ├── N2N VPN（n2n）
+│   ├── Tailscale（tailscale）
+│   └── ZeroTier（zerotier）
+├── 网络
+│   ├── 接口（network）
+│   ├── 路由（routes-network）
+│   ├── DHCP/DNS（dhcp）
+│   ├── 网络诊断（diagnostics）
+│   ├── 防火墙（firewall）
+│   ├── Socat（socat）
+│   ├── 多线多拨（syncdial）
+│   ├── 网速控制（eqos）
+│   └── MultiWAN 管理器（mwan3）
+└── 带宽监控
+    ├── 显示（display）
+    ├── 配置（config）
+    └── 备份（backup）
+```
+
 </details>
 
 ## 固件下载
