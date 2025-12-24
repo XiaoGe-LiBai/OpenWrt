@@ -23,7 +23,6 @@
 
 ## 插件预览 [![](https://img.shields.io/badge/-固件插件及功能预览-FFFFFF.svg)](#插件预览-)
 - **标记为 (arm) 的菜单仅出现在 ARM 固件中**
-> ⚠️ 基于合规与安全考量，IPSec / SoftEther / OpenVPN / N2N VPN、Tailscale、ShadowSocksR Plus+、动态 DNS、DDNSTO 等插件默认由脚本屏蔽，如需启用请评估风险并手动调整配置。
 <details>
 <summary><b>菜单结构（与 disable_plugins.py 保持一致）</b></summary>
 
