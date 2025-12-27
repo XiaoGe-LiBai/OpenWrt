@@ -83,6 +83,7 @@ done
 
 # 报错修复
 # sed -i 's/+libpcre/+libpcre2/g' package/feeds/telephony/freeswitch/Makefile
+rm -rf feeds/packages/packages/lang/lua/lua-neturl
 
 # rust(ci false)
 if [ "$REPO_BRANCH" != "openwrt-23.05" ]; then
