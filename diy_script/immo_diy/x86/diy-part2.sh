@@ -106,6 +106,15 @@ git_clone 22.03 https://github.com/sbwml/feeds_packages_net_aria2 aria2
 # 同时兼容firewall3/4 的luci-app-socat
 clone_dir main https://github.com/chenmozhijin/luci-app-socat luci-app-socat
 
+# luci-app-tailscale
+sed -i '/\/etc\/init\.d\/tailscale/d;/\/etc\/config\/tailscale/d;' feeds/packages/net/tailscale/Makefile
+git_clone https://github.com/asvow/luci-app-tailscale luci-app-tailscale
+
+# 看门狗(菜单项放到服务里面)
+clone_dir main https://github.com/sirpdboy/luci-app-watchdog.git luci-app-watchdog watchdog
+sed -i '/"admin\/control"[[:space:]]*:/,/^[[:space:]]*},/d' $destination_dir/luci-app-watchdog/root/usr/share/luci/menu.d/luci-app-watchdog.json
+sed -i 's#"admin/control/#"admin/services/#g' $destination_dir/luci-app-watchdog/root/usr/share/luci/menu.d/luci-app-watchdog.json
+
 # ddns-go 动态域名
 # clone_all https://github.com/sirpdboy/luci-app-ddns-go
 
@@ -166,8 +175,11 @@ clone_all https://github.com/nikkinikki-org/OpenWrt-nikki
 # Momo
 clone_all https://github.com/nikkinikki-org/OpenWrt-momo
 
-# luci-app-filemanager
+# filemanager文件管理
 git_clone https://github.com/sbwml/luci-app-filemanager luci-app-filemanager
+
+# netspeedtest网络测试
+clone_dir main https://github.com/sbwml/openwrt_pkgs luci-app-netspeedtest speedtest-cli
 
 # openclash
 clone_dir master https://github.com/vernesong/OpenClash luci-app-openclash
