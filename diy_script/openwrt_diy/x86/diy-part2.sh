@@ -210,8 +210,11 @@ clone_all https://github.com/nikkinikki-org/OpenWrt-momo
 # homeproxy
 # git_clone https://github.com/immortalwrt/homeproxy luci-app-homeproxy
 
-# luci-app-filemanager
+# filemanager文件管理
 git_clone https://github.com/sbwml/luci-app-filemanager luci-app-filemanager
+
+# netspeedtest网络测试
+clone_dir main https://github.com/sbwml/openwrt_pkgs luci-app-netspeedtest speedtest-cli
 
 # openclash
 clone_dir master https://github.com/vernesong/OpenClash luci-app-openclash
