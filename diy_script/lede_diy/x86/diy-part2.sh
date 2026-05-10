@@ -18,8 +18,8 @@ source $GITHUB_WORKSPACE/diy_script/function.sh
 # sed -i "s/hostname='.*'/hostname='Jejz'/g" ./package/base-files/files/bin/config_generate
 
 # 修改默认IP
-sed -i 's/192.168.1.1/192.168.8.3/g' package/base-files/files/bin/config_generate
-sed -i 's/192.168.1.1/192.168.8.3/g' package/base-files/luci2/bin/config_generate
+sed -i 's/192.168.1.1/192.168.2.241/g' package/base-files/files/bin/config_generate
+sed -i 's/192.168.1.1/192.168.2.241/g' package/base-files/luci2/bin/config_generate
 
 # 设置密码为空（安装固件时无需密码登陆，然后自己修改想要的密码）
 sed -i '/$1$V4UetPzk$CYXluq4wUazHjmCDBCqXF./d' package/lean/default-settings/files/zzz-default-settings
@@ -133,7 +133,7 @@ git_clone https://github.com/sbwml/packages_lang_golang golang
 clone_all lua https://github.com/sbwml/luci-app-openlist2
 
 # ssr-plus
-clone_all https://github.com/fw876/helloworld
+# clone_all https://github.com/fw876/helloworld
 
 # passwall
 clone_all https://github.com/xiaorouji/openwrt-passwall-packages

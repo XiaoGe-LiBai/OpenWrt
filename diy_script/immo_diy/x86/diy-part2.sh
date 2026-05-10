@@ -14,7 +14,7 @@ chmod +x $GITHUB_WORKSPACE/diy_script/function.sh
 source $GITHUB_WORKSPACE/diy_script/function.sh
 
 # 修改默认IP
-sed -i 's/192.168.1.1/192.168.8.3/g' package/base-files/files/bin/config_generate
+sed -i 's/192.168.1.1/192.168.2.240/g' package/base-files/files/bin/config_generate
 
 # 设置ttyd免帐号登录
 sed -i 's/\/bin\/login/\/bin\/login -f root/' feeds/packages/utils/ttyd/files/ttyd.config
@@ -100,8 +100,8 @@ clone_dir main https://github.com/xiangfeidexiaohuo/2305-ipk luci-app-adguardhom
 sed -i '/"order":/{s/\([0-9]\+\)/"\1"/}' package/feeds/luci/luci-app-ramfree/root/usr/share/luci/menu.d/luci-app-ramfree.json
 
 # aria2 & ariaNG
-clone_all https://github.com/sbwml/ariang-nginx
-git_clone 22.03 https://github.com/sbwml/feeds_packages_net_aria2 aria2
+# clone_all https://github.com/sbwml/ariang-nginx
+# git_clone 22.03 https://github.com/sbwml/feeds_packages_net_aria2 aria2
 
 # 同时兼容firewall3/4 的luci-app-socat
 clone_dir main https://github.com/chenmozhijin/luci-app-socat luci-app-socat
@@ -125,16 +125,16 @@ sed -i 's#"admin/control/#"admin/services/#g' $destination_dir/luci-app-watchdog
 clone_all https://github.com/gdy666/luci-app-lucky
 
 # ddnsto
-clone_dir main https://github.com/linkease/nas-packages-luci luci-app-ddnsto
-clone_dir master https://github.com/linkease/nas-packages ddnsto
-ddnsto_ver=$(grep -i "PKG_VERSION:=" $destination_dir/ddnsto/Makefile | awk -F'=' '{print $2}' | tr -d ' ')
-if [ "$ddnsto_ver" == "3.0.4" ]; then
-    echo -n "当前 ddnsto 版本是: $ddnsto_ver, 开始替换......"
+# clone_dir main https://github.com/linkease/nas-packages-luci luci-app-ddnsto
+# clone_dir master https://github.com/linkease/nas-packages ddnsto
+# ddnsto_ver=$(grep -i "PKG_VERSION:=" $destination_dir/ddnsto/Makefile | awk -F'=' '{print $2}' | tr -d ' ')
+# if [ "$ddnsto_ver" == "3.0.4" ]; then
+#     echo -n "当前 ddnsto 版本是: $ddnsto_ver, 开始替换......"
 
-    sed -i 's|PKG_SOURCE_URL:=.*|PKG_SOURCE_URL:=https://github.com/Jejz168/OpenWrt/raw/refs/heads/main/personal/ddnsto/|' $destination_dir/ddnsto/Makefile
+#     sed -i 's|PKG_SOURCE_URL:=.*|PKG_SOURCE_URL:=https://github.com/Jejz168/OpenWrt/raw/refs/heads/main/personal/ddnsto/|' $destination_dir/ddnsto/Makefile
 
-    echo "✅ 替换完成！"
-fi
+#     echo "✅ 替换完成！"
+# fi
 
 # OpenAppFilter 应用过滤
 clone_all https://github.com/sbwml/OpenAppFilter
@@ -149,18 +149,18 @@ clone_all https://github.com/sbwml/OpenAppFilter
 # git_clone https://github.com/UnblockNeteaseMusic/luci-app-unblockneteasemusic
 
 # smartdns
-git_clone https://github.com/pymumu/luci-app-smartdns luci-app-smartdns
+# git_clone https://github.com/pymumu/luci-app-smartdns luci-app-smartdns
 #git_clone https://github.com/pymumu/openwrt-smartdns smartdns
 
 # mosdns
-clone_all v5 https://github.com/sbwml/luci-app-mosdns
+# clone_all v5 https://github.com/sbwml/luci-app-mosdns
 
 # openlist
-git_clone https://github.com/sbwml/packages_lang_golang golang
-clone_all https://github.com/sbwml/luci-app-openlist
+# git_clone https://github.com/sbwml/packages_lang_golang golang
+# clone_all https://github.com/sbwml/luci-app-openlist
 
 # ssr-plus
-clone_all https://github.com/fw876/helloworld
+# clone_all https://github.com/fw876/helloworld
 
 # passwall
 clone_all https://github.com/Openwrt-Passwall/openwrt-passwall-packages
@@ -176,7 +176,7 @@ fi
 clone_all https://github.com/nikkinikki-org/OpenWrt-nikki
 
 # Momo
-clone_all https://github.com/nikkinikki-org/OpenWrt-momo
+# clone_all https://github.com/nikkinikki-org/OpenWrt-momo
 
 # filemanager文件管理
 git_clone https://github.com/sbwml/luci-app-filemanager luci-app-filemanager
@@ -193,10 +193,10 @@ make && sudo make install
 popd
 
 # 添加主题
-git_clone https://github.com/sirpdboy/luci-theme-kucat
-git_clone https://github.com/sirpdboy/luci-app-kucat-config
-git_clone https://github.com/eamonxg/luci-theme-aurora
-git_clone https://github.com/eamonxg/luci-app-aurora-config
+# git_clone https://github.com/sirpdboy/luci-theme-kucat
+# git_clone https://github.com/sirpdboy/luci-app-kucat-config
+# git_clone https://github.com/eamonxg/luci-theme-aurora
+# git_clone https://github.com/eamonxg/luci-app-aurora-config
 # git_clone https://github.com/kiddin9/luci-theme-edge
 # git_clone https://github.com/jerrykuku/luci-theme-argon
 # git_clone https://github.com/jerrykuku/luci-app-argon-config
